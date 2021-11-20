@@ -6,7 +6,7 @@
 
 var words=["python", "javascript", "mongodb", "json", "java", "html", "css", "c", "csharp", "golang", "kotlin", "php", "sql", "ruby"]
 let answer=''
-let maxWrong=6
+let maxWrong=15
 let mistakes=0
 let guessed=[]
 
@@ -16,7 +16,7 @@ String.prototype.replaceAt = function(index, replacement) {
 
 function randomWord(){
   answer=words[Math.floor(Math.random()*words.length)]
-  alert(answer)
+
 }
 randomWord()
 
@@ -64,18 +64,37 @@ console.log(blank)
       mistakes+=1
       document.getElementById('button1').className = 'notselected';
       if (mistakes===1){
-        document.getElementById("hangman").innerHTML="o"
+        document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       } else if (mistakes===2){
-        document.getElementById("hangman2").innerHTML="/"
+        document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       } else if (mistakes===3) {
-        document.getElementById("hangman2").innerHTML="/|"
+        document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       } else if (mistakes===4) {
-        document.getElementById("hangman2").innerHTML="/|\\"
+        document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       } else if (mistakes===5) {
-        document.getElementById("hangman3").innerHTML="/"
+        document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
       } else if (mistakes===6){
+
+        document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+      } else if (mistakes===7) {
+        document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+      } else if (mistakes===8) {
+        document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+      } else if (mistakes === 9) {
+        document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+      } else if (mistakes===10) {
+        document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+      } else if (mistakes===11) {
+        document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+      } else if (mistakes===12) {
+        document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+      } else if (mistakes===13) {
+        document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+      } else if (mistakes===14) {
+        document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+      } else if (mistakes===15) {
+        document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
         document.getElementById("blank").innerHTML=answer
-        document.getElementById("hangman3").innerHTML="/\\"
       }
 
     }
@@ -114,18 +133,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button2').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -164,18 +202,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button3').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -214,18 +271,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button4').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -264,18 +340,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button5').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -314,18 +409,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button6').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -364,18 +478,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button7').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -414,18 +547,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button8').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -464,18 +616,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button9').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -514,18 +685,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button10').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -564,18 +754,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button11').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -614,18 +823,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button12').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -664,18 +892,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button13').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -714,18 +961,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button14').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -764,18 +1030,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button15').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -814,18 +1099,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button16').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -864,18 +1168,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button17').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -914,18 +1237,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button18').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -964,18 +1306,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button19').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -1014,18 +1375,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button20').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -1064,18 +1444,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button21').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -1090,7 +1489,7 @@ document.getElementById('button22').onclick = function () {
   userRating = 22;
   guessed.push("v")
   if (answer.includes("v")) {
-    document.getElementById('button1').className = 'selected';
+    document.getElementById('button22').className = 'selected';
     document.getElementById("blank").innerHTML=blank
 
     if (answerwithspaces[0]==="v"){
@@ -1114,18 +1513,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button22').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -1164,18 +1582,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button23').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -1214,18 +1651,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button24').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -1264,18 +1720,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button25').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -1314,18 +1789,37 @@ console.log(blank)
     mistakes+=1
     document.getElementById('button26').className = 'notselected';
     if (mistakes===1){
-      document.getElementById("hangman").innerHTML="o"
+      document.getElementById("hangman").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===2){
-      document.getElementById("hangman2").innerHTML="/"
+      document.getElementById("hangman2").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===3) {
-      document.getElementById("hangman2").innerHTML="/|"
+      document.getElementById("hangman3").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===4) {
-      document.getElementById("hangman2").innerHTML="/|\\"
+      document.getElementById("hangman4").innerHTML="⣿⣿⣿⡇⠄⣿⣿⣿⡿⠟⠋⣉⣉⣉⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===5) {
-      document.getElementById("hangman3").innerHTML="/"
+      document.getElementById("hangman5").innerHTML="⣿⣿⣿⠃⠄⠹⠟⣡⣶⡿⢟⣛⣛⡻⢿⣦⣩⣤⣤⣤⣬⡉⢻⣿⣿⣿⣿⣿⣿⣿"
     } else if (mistakes===6){
+
+      document.getElementById("hangman6").innerHTML="⣿⣿⣿⠄⢀⢤⣾⣿⣿⣿⣿⡿⠿⠿⠿⢮⡃⣛⣛⡻⠿⢿⠈⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===7) {
+      document.getElementById("hangman7").innerHTML="⣿⡟⢡⣴⣯⣿⣿⣿⣉⠤⣤⣭⣶⣶⣶⣮⣔⡈⠛⠛⠛⢓⠦⠈⢻⣿⣿⣿⣿⣿"
+    } else if (mistakes===8) {
+      document.getElementById("hangman8").innerHTML="⠏⣠⣿⣿⣿⣿⣿⣿⣿⣯⡪⢛⠿⢿⣿⣿⣿⡿⣼⣿⣿⣿⣶⣮⣄⠙⣿⣿⣿⣿"
+    } else if (mistakes === 9) {
+      document.getElementById("hangman9").innerHTML="⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡭⠴⣶⣶⣽⣽⣛⡿⠿⠿⠿⠿⠇⣿⣿⣿⣿"
+    } else if (mistakes===10) {
+      document.getElementById("hangman10").innerHTML="⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⣛⢛⡛⢋⣥⣴⣿⣿⣿⣿⣿"
+    } else if (mistakes===11) {
+      document.getElementById("hangman11").innerHTML="⣿⣿⣿⣿⣿⢿⠱⣿⣿⣛⠾⣭⣛⡿⢿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===12) {
+      document.getElementById("hangman12").innerHTML="⠑⠽⡻⢿⣿⣮⣽⣷⣶⣯⣽⣳⠮⣽⣟⣲⠯⢭⣿⣛⣛⣿⡇⢸⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===13) {
+      document.getElementById("hangman13").innerHTML="⠄⠄⠈⠑⠊⠉⠟⣻⠿⣿⣿⣿⣿⣷⣾⣭⣿⣛⠷⠶⠶⠂⣴⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===14) {
+      document.getElementById("hangman14").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠁⠙⠒⠙⠯⠍⠙⢉⣉⣡⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    } else if (mistakes===15) {
+      document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
-      document.getElementById("hangman3").innerHTML="/\\"
     }
 
   }
@@ -1338,3 +1832,4 @@ console.log(blank)
 // sources
 // https://jsfiddle.net/3fzb1kk1/
 // http://jsfiddle.net/Mzg6c/
+// https://www.twitchquotes.com/copypastas/ascii-art
