@@ -16,7 +16,7 @@ String.prototype.replaceAt = function(index, replacement) {
 
 function randomWord(){
   answer=words[Math.floor(Math.random()*words.length)]
-
+  
 }
 randomWord()
 
@@ -45,7 +45,7 @@ document.getElementById('button1').onclick = function () {
 
       if (answerwithspaces[0]==="a"){
         blank=blank.replaceAt(0, "a")
-      } else {
+      }
         for(var i=1; i<answerwithspaces.length;i++) {
           if (answerwithspaces[i+1] === "a"){
             console.log(i)
@@ -55,7 +55,7 @@ document.getElementById('button1').onclick = function () {
 
       }
 
-      }
+
       document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -114,7 +114,7 @@ document.getElementById('button2').onclick = function () {
 
     if (answerwithspaces[0]==="b"){
       blank=blank.replaceAt(0, "b")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "b"){
           console.log(i)
@@ -124,7 +124,7 @@ document.getElementById('button2').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -252,7 +252,7 @@ document.getElementById('button4').onclick = function () {
 
     if (answerwithspaces[0]==="d"){
       blank=blank.replaceAt(0, "d")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "d"){
           console.log(i)
@@ -262,7 +262,7 @@ document.getElementById('button4').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -390,7 +390,7 @@ document.getElementById('button6').onclick = function () {
 
     if (answerwithspaces[0]==="f"){
       blank=blank.replaceAt(0, "f")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "f"){
           console.log(i)
@@ -400,7 +400,7 @@ document.getElementById('button6').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -459,7 +459,7 @@ document.getElementById('button7').onclick = function () {
 
     if (answerwithspaces[0]==="g"){
       blank=blank.replaceAt(0, "g")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "g"){
           console.log(i)
@@ -469,7 +469,7 @@ document.getElementById('button7').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -528,7 +528,7 @@ document.getElementById('button8').onclick = function () {
 
     if (answerwithspaces[0]==="h"){
       blank=blank.replaceAt(0, "h")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "h"){
           console.log(i)
@@ -538,7 +538,7 @@ document.getElementById('button8').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -597,7 +597,7 @@ document.getElementById('button9').onclick = function () {
 
     if (answerwithspaces[0]==="i"){
       blank=blank.replaceAt(0, "i")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "i"){
           console.log(i)
@@ -607,7 +607,7 @@ document.getElementById('button9').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -666,7 +666,7 @@ document.getElementById('button10').onclick = function () {
 
     if (answerwithspaces[0]==="j"){
       blank=blank.replaceAt(0, "j")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "j"){
           console.log(i)
@@ -676,7 +676,7 @@ document.getElementById('button10').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -735,7 +735,7 @@ document.getElementById('button11').onclick = function () {
 
     if (answerwithspaces[0]==="k"){
       blank=blank.replaceAt(0, "k")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "k"){
           console.log(i)
@@ -745,7 +745,7 @@ document.getElementById('button11').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -804,7 +804,7 @@ document.getElementById('button12').onclick = function () {
 
     if (answerwithspaces[0]==="l"){
       blank=blank.replaceAt(0, "l")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "l"){
           console.log(i)
@@ -814,7 +814,7 @@ document.getElementById('button12').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -873,7 +873,7 @@ document.getElementById('button13').onclick = function () {
 
     if (answerwithspaces[0]==="m"){
       blank=blank.replaceAt(0, "m")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "m"){
           console.log(i)
@@ -883,7 +883,7 @@ document.getElementById('button13').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -937,12 +937,12 @@ document.getElementById('button14').onclick = function () {
   userRating = 14;
   guessed.push("n")
   if (answer.includes("n")) {
-    document.getElementById('button1').className = 'selected';
+    document.getElementById('button14').className = 'selected';
     document.getElementById("blank").innerHTML=blank
 
     if (answerwithspaces[0]==="n"){
       blank=blank.replaceAt(0, "n")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "n"){
           console.log(i)
@@ -952,7 +952,7 @@ document.getElementById('button14').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -1011,7 +1011,7 @@ document.getElementById('button15').onclick = function () {
 
     if (answerwithspaces[0]==="o"){
       blank=blank.replaceAt(0, "o")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "o"){
           console.log(i)
@@ -1021,7 +1021,7 @@ document.getElementById('button15').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -1080,7 +1080,7 @@ document.getElementById('button16').onclick = function () {
 
     if (answerwithspaces[0]==="p"){
       blank=blank.replaceAt(0, "p")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "p"){
           console.log(i)
@@ -1088,7 +1088,7 @@ document.getElementById('button16').onclick = function () {
           console.log(blank)
         }
 
-    }
+
 
     }
     document.getElementById("blank").innerHTML=blank
@@ -1149,7 +1149,7 @@ document.getElementById('button17').onclick = function () {
 
     if (answerwithspaces[0]==="q"){
       blank=blank.replaceAt(0, "q")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "q"){
           console.log(i)
@@ -1159,7 +1159,7 @@ document.getElementById('button17').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -1218,7 +1218,7 @@ document.getElementById('button18').onclick = function () {
 
     if (answerwithspaces[0]==="r"){
       blank=blank.replaceAt(0, "r")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "r"){
           console.log(i)
@@ -1228,7 +1228,7 @@ document.getElementById('button18').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -1287,7 +1287,7 @@ document.getElementById('button19').onclick = function () {
 
     if (answerwithspaces[0]==="s"){
       blank=blank.replaceAt(0, "s")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "s"){
           console.log(i)
@@ -1297,7 +1297,7 @@ document.getElementById('button19').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -1356,7 +1356,7 @@ document.getElementById('button20').onclick = function () {
 
     if (answerwithspaces[0]==="t"){
       blank=blank.replaceAt(0, "t")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "t"){
           console.log(i)
@@ -1366,7 +1366,7 @@ document.getElementById('button20').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -1425,7 +1425,7 @@ document.getElementById('button21').onclick = function () {
 
     if (answerwithspaces[0]==="u"){
       blank=blank.replaceAt(0, "u")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "u"){
           console.log(i)
@@ -1435,7 +1435,7 @@ document.getElementById('button21').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -1494,7 +1494,7 @@ document.getElementById('button22').onclick = function () {
 
     if (answerwithspaces[0]==="v"){
       blank=blank.replaceAt(0, "v")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "a"){
           console.log(i)
@@ -1504,7 +1504,7 @@ document.getElementById('button22').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -1563,7 +1563,7 @@ document.getElementById('button23').onclick = function () {
 
     if (answerwithspaces[0]==="w"){
       blank=blank.replaceAt(0, "w")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "w"){
           console.log(i)
@@ -1573,7 +1573,7 @@ document.getElementById('button23').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -1632,7 +1632,7 @@ document.getElementById('button24').onclick = function () {
 
     if (answerwithspaces[0]==="x"){
       blank=blank.replaceAt(0, "x")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "x"){
           console.log(i)
@@ -1642,7 +1642,7 @@ document.getElementById('button24').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -1701,7 +1701,7 @@ document.getElementById('button25').onclick = function () {
 
     if (answerwithspaces[0]==="y"){
       blank=blank.replaceAt(0, "y")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "y"){
           console.log(i)
@@ -1711,7 +1711,7 @@ document.getElementById('button25').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
@@ -1770,7 +1770,7 @@ document.getElementById('button26').onclick = function () {
 
     if (answerwithspaces[0]==="z"){
       blank=blank.replaceAt(0, "z")
-    } else {
+    }
       for(var i=1; i<answerwithspaces.length;i++) {
         if (answerwithspaces[i+1] === "z"){
           console.log(i)
@@ -1780,7 +1780,7 @@ document.getElementById('button26').onclick = function () {
 
     }
 
-    }
+
     document.getElementById("blank").innerHTML=blank
 
 console.log(blank)
