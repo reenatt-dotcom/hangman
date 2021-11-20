@@ -16,7 +16,7 @@ String.prototype.replaceAt = function(index, replacement) {
 
 function randomWord(){
   answer=words[Math.floor(Math.random()*words.length)]
-  
+
 }
 randomWord()
 
@@ -57,6 +57,8 @@ document.getElementById('button1').onclick = function () {
 
 
       document.getElementById("blank").innerHTML=blank
+      if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
+
 
 console.log(blank)
 
@@ -95,11 +97,13 @@ console.log(blank)
       } else if (mistakes===15) {
         document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
         document.getElementById("blank").innerHTML=answer
+        document.getElementById("hangman16").innerHTML="you lose"
       }
 
     }
     let button=document.querySelector("#button1")
     button.disabled=true
+
 
 }
 
@@ -126,6 +130,7 @@ document.getElementById('button2').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -164,6 +169,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -195,6 +201,8 @@ document.getElementById('button3').onclick = function () {
 
     }
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
+
 
 console.log(blank)
 
@@ -233,6 +241,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -264,6 +273,7 @@ document.getElementById('button4').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -302,6 +312,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -333,6 +344,7 @@ document.getElementById('button5').onclick = function () {
 
     }
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -371,6 +383,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -402,6 +415,7 @@ document.getElementById('button6').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -440,6 +454,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -471,6 +486,7 @@ document.getElementById('button7').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -509,6 +525,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -540,6 +557,7 @@ document.getElementById('button8').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -578,6 +596,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -609,6 +628,7 @@ document.getElementById('button9').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -647,6 +667,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -678,6 +699,7 @@ document.getElementById('button10').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -716,6 +738,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -747,6 +770,7 @@ document.getElementById('button11').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -785,6 +809,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -816,6 +841,7 @@ document.getElementById('button12').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -854,6 +880,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -885,6 +912,7 @@ document.getElementById('button13').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -923,6 +951,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -954,6 +983,7 @@ document.getElementById('button14').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -992,6 +1022,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1023,6 +1054,7 @@ document.getElementById('button15').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -1061,6 +1093,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1092,6 +1125,7 @@ document.getElementById('button16').onclick = function () {
 
     }
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -1130,6 +1164,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1161,6 +1196,7 @@ document.getElementById('button17').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -1199,6 +1235,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1230,6 +1267,7 @@ document.getElementById('button18').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -1268,6 +1306,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1299,6 +1338,7 @@ document.getElementById('button19').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -1337,6 +1377,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1368,6 +1409,7 @@ document.getElementById('button20').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -1406,6 +1448,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1437,6 +1480,7 @@ document.getElementById('button21').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -1475,6 +1519,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1496,9 +1541,9 @@ document.getElementById('button22').onclick = function () {
       blank=blank.replaceAt(0, "v")
     }
       for(var i=1; i<answerwithspaces.length;i++) {
-        if (answerwithspaces[i+1] === "a"){
+        if (answerwithspaces[i+1] === "v"){
           console.log(i)
-          blank=blank.replaceAt(i+1, "a")
+          blank=blank.replaceAt(i+1, "v")
           console.log(blank)
         }
 
@@ -1506,6 +1551,7 @@ document.getElementById('button22').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -1544,6 +1590,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1575,6 +1622,7 @@ document.getElementById('button23').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -1613,6 +1661,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1644,6 +1693,7 @@ document.getElementById('button24').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -1682,6 +1732,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1713,6 +1764,7 @@ document.getElementById('button25').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -1751,6 +1803,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1782,6 +1835,7 @@ document.getElementById('button26').onclick = function () {
 
 
     document.getElementById("blank").innerHTML=blank
+    if (!blank.includes("_")) document.getElementById("hangman16").innerHTML="you win"
 
 console.log(blank)
 
@@ -1820,6 +1874,7 @@ console.log(blank)
     } else if (mistakes===15) {
       document.getElementById("hangman15").innerHTML="⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
       document.getElementById("blank").innerHTML=answer
+      document.getElementById("hangman16").innerHTML="you lose"
     }
 
   }
@@ -1832,4 +1887,8 @@ console.log(blank)
 // sources
 // https://jsfiddle.net/3fzb1kk1/
 // http://jsfiddle.net/Mzg6c/
+// https://stackoverflow.com/questions/1431094/how-do-i-replace-a-character-at-a-particular-index-in-javascript
+// https://flexiple.com/disable-button-javascript/
+// https://www.w3schools.com/js/tryit.asp?filename=tryjs_change_innerhtml
+// https://css-tricks.com/forums/topic/making-my-h1-and-h2-text-vertically-closer-to-one-another/
 // https://www.twitchquotes.com/copypastas/ascii-art
